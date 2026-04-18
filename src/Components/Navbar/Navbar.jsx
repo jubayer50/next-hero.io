@@ -2,8 +2,12 @@ import Image from "next/image";
 import Logo from "../../assets/logo.png";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
+// import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  // const pathName = usePathname();
+  // active link not working but in future
+
   const links = (
     <>
       <li>
