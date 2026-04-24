@@ -6,7 +6,7 @@ import MyInstallButton from "@/Components/MyInstallButton/MyInstallButton";
 import Image from "next/image";
 
 const getPromise = async () => {
-  const res = await fetch("http://localhost:3000//data.json");
+  const res = await fetch("https://next-hero-io.vercel.app/data.json");
   return res.json();
 };
 

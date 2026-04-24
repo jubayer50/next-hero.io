@@ -2,7 +2,7 @@ import Link from "next/link";
 import AppCard from "../AppCard/AppCard";
 
 const getPromise = async () => {
-  const res = await fetch("http://localhost:3000//data.json", {
+  const res = await fetch("https://next-hero-io.vercel.app/data.json", {
     cache: "no-store",
   });
   return res.json();
