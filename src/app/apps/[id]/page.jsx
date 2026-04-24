@@ -1,6 +1,7 @@
 import IconDownload from "@/assets/icon-downloads.png";
 import IconRating from "@/assets/icon-ratings.png";
 import IconReview from "@/assets/icon-review.png";
+import MyInstallButton from "@/Components/MyInstallButton/MyInstallButton";
 import Image from "next/image";
 
 const getPromise = async () => {
@@ -18,9 +19,9 @@ const AppDetailPage = async ({ params }) => {
   return (
     <div className="bg-[#00000008]">
       <div className="max-w-360 mx-auto py-20">
-        <div className="space-y-10 ">
+        <div className="space-y-10 divide-y divide-[#00193120]">
           {/* content with image */}
-          <div className="flex items-center gap-10">
+          <div className="flex items-center gap-10 pb-10 ">
             {/* imm */}
             <div className="w-87.5 h-87.5 bg-white flex justify-center items-center">
               <Image
@@ -32,10 +33,9 @@ const AppDetailPage = async ({ params }) => {
             </div>
 
             {/* content */}
-
-            <div className="space-y-7">
+            <div className="space-y-6 divide-y divide-[#00193120]">
               {/* title and sub info */}
-              <div className="space-y-2">
+              <div className="space-y-2 pb-6">
                 <h2 className="text-3xl font-bold text-[#001931]">
                   {app.title}
                 </h2>
@@ -50,7 +50,7 @@ const AppDetailPage = async ({ params }) => {
               {/* icon with info */}
               <div className="flex gap-10">
                 {/* download section */}
-                <div className="flex flex-col gap-2">
+                <div className="space-y-2">
                   <Image
                     src={IconDownload}
                     alt="download-icon"
@@ -64,24 +64,24 @@ const AppDetailPage = async ({ params }) => {
                 </div>
 
                 {/* rating section */}
-                <div className="flex flex-col gap-2">
+                <div className="space-y-2">
                   <Image
                     src={IconRating}
-                    alt="download-icon"
+                    alt="rating-icon"
                     width={40}
                     height={40}
                   ></Image>
                   <p className="text-[#001931]">Average Ratings</p>
-                  <h2 className="text-[#001931] font-extrabold text-4xl">
+                  <h2 className="text-[#001931] font-extrabold text-[40px]">
                     {app.ratingAvg}
                   </h2>
                 </div>
 
                 {/* review section */}
-                <div className="flex flex-col gap-2">
+                <div className="space-y-2">
                   <Image
                     src={IconReview}
-                    alt="download-icon"
+                    alt="review-icon"
                     width={40}
                     height={40}
                   ></Image>
@@ -94,16 +94,16 @@ const AppDetailPage = async ({ params }) => {
 
               {/* btn */}
               <div>
-                <button className="btn bg-[#00D390] font-semibold text-xl text-white">
-                  Install Now ({app.size})
-                </button>
+                {/* clint btn component */}
+                <MyInstallButton app={app}></MyInstallButton>
               </div>
             </div>
           </div>
 
           {/* bar chart */}
-          <div>
-            <h2 className="py-5 text-2xl font-medium"> Bar chart</h2>
+          <div className="pb-10">
+            <h2 className="text-2xl font-bold py-2">Chart</h2>
+            {/* <Chart></Chart> */}
           </div>
 
           {/* description */}
