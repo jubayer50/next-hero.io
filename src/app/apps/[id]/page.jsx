@@ -1,6 +1,7 @@
 import IconDownload from "@/assets/icon-downloads.png";
 import IconRating from "@/assets/icon-ratings.png";
 import IconReview from "@/assets/icon-review.png";
+import ChartGraph from "@/Components/ChartGraph/ChartGraph";
 import MyInstallButton from "@/Components/MyInstallButton/MyInstallButton";
 import Image from "next/image";
 
@@ -102,7 +103,7 @@ const AppDetailPage = async ({ params }) => {
 
           {/* bar chart */}
           <div className="pb-10">
-            <h2 className="text-2xl font-bold py-2">Chart</h2>
+            <ChartGraph ratings={app.ratings}></ChartGraph>
             {/* <Chart></Chart> */}
           </div>
 
