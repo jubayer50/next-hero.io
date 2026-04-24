@@ -29,7 +29,7 @@ const TrendingApps = async () => {
           ))}
         </div>
 
-        <Link href={"/installation"} className="flex justify-center">
+        <Link href={"/apps"} className="flex justify-center">
           <button className="btn bg-linear-to-b from-[#632EE3] to-[#9F62F2] text-white">
             View All
           </button>

@@ -1,11 +1,12 @@
 import Image from "next/image";
 import IconDownload from "@/assets/icon-downloads.png";
 import IconRating from "@/assets/icon-ratings.png";
+import Link from "next/link";
 
 const AppCard = ({ app }) => {
   return (
     <div className="bg-white rounded-md p-4">
-      <div className="space-y-4 flex flex-col">
+      <Link href={`/apps/${app.id}`} className="space-y-4 flex flex-col">
         <div className="bg-[#D9D9D9] rounded-md flex justify-center items-center py-15 flex-1">
           <Image src={app.image} alt={app.title} width={120} height={0}></Image>
         </div>
@@ -37,7 +38,7 @@ const AppCard = ({ app }) => {
             </div>
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };
