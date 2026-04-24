@@ -17,7 +17,10 @@ const MyInstallButton = ({ app }) => {
     }
 
     setInstallApps([...installApps, currentApp]);
+    alert(`${currentApp.title} is Installed!`);
   };
+
+  const isInstall = installApps.find((installApp) => installApp.id === app.is);
 
   return (
     <div>
