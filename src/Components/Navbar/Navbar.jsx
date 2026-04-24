@@ -2,6 +2,7 @@ import Image from "next/image";
 import Logo from "../../assets/logo.png";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
+import MyNavLink from "./MyNavLink";
 // import { usePathname } from "next/navigation";
 
 const Navbar = () => {
@@ -11,13 +12,13 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <Link href={"/"}>Home</Link>
+        <MyNavLink href={"/"}>Home</MyNavLink>
       </li>
       <li>
-        <Link href={"/apps"}>Apps</Link>
+        <MyNavLink href={"/apps"}>Apps</MyNavLink>
       </li>
       <li>
-        <Link href={"/installation"}>Installation</Link>
+        <MyNavLink href={"/installation"}>Installation</MyNavLink>
       </li>
     </>
   );
@@ -61,7 +62,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className="flex gap-6 px-1">{links}</ul>
         </div>
         <div className="navbar-end ">
           <button className="btn bg-linear-to-b from-[#632EE3] to-[#9F62F2] text-white items-center">
