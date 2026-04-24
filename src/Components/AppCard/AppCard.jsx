@@ -5,15 +5,9 @@ import IconRating from "@/assets/icon-ratings.png";
 const AppCard = ({ app }) => {
   return (
     <div className="bg-white rounded-md p-4">
-      <div className="space-y-4">
-        <div className="bg-[#D9D9D9] rounded-md flex justify-center items-center">
-          <Image
-            src={""}
-            alt={""}
-            className="w-62.5"
-            width={0}
-            height={0}
-          ></Image>
+      <div className="space-y-4 flex flex-col">
+        <div className="bg-[#D9D9D9] rounded-md flex justify-center items-center py-15 flex-1">
+          <Image src={app.image} alt={app.title} width={120} height={0}></Image>
         </div>
 
         <div className="space-y-4">

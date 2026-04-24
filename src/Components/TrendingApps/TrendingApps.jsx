@@ -1,7 +1,10 @@
+import Link from "next/link";
 import AppCard from "../AppCard/AppCard";
 
 const getPromise = async () => {
-  const res = await fetch("http://localhost:3000//data.json");
+  const res = await fetch("http://localhost:3000//data.json", {
+    cache: "no-store",
+  });
   return res.json();
 };
 
@@ -26,11 +29,11 @@ const TrendingApps = async () => {
           ))}
         </div>
 
-        <div className="text-center">
+        <Link href={"/installation"} className="flex justify-center">
           <button className="btn bg-linear-to-b from-[#632EE3] to-[#9F62F2] text-white">
             View All
           </button>
-        </div>
+        </Link>
       </div>
     </div>
   );
